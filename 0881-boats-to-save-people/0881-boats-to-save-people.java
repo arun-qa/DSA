@@ -3,25 +3,24 @@ class Solution {
         
     Arrays.sort(people);
 
-    int i=people.length-1;
-    int j=i-1;
+    int i=0;
+    int j=people.length-1;
     int count = 0;
 
-    while(j>=0 && j!=i)
+    while(i<=j)
     {
-        if(i==limit)
+        if(people[i]+people[j]<=limit)
         {
             count++;
-            j--;
-            i--;    
+            i++;
+            j--;    
         }
        
 
         else if(people[i]+people[j]>limit)
         {
             count++;  
-            j--;
-            i--;  
+            j--;  
         }
 
         else if(people[i]+people[j] == limit)
@@ -30,6 +29,7 @@ class Solution {
             j=j-2;
             i=i-2;
         }
+       
        
     }
             return count;
