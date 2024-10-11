@@ -11,17 +11,15 @@ class Solution {
     {
         if(people[i]+people[j]<=limit)
         {
-            count++;
+            
             i++;
-            j--;    
+               
         }
+        j--; 
+        count++;
        
 
-        else if(people[i]+people[j]>limit)
-        {
-            count++;  
-            j--;  
-        }  
+        
     }
             return count;
     }
