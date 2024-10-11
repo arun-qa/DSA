@@ -21,16 +21,7 @@ class Solution {
         {
             count++;  
             j--;  
-        }
-
-        else if(people[i]+people[j] == limit)
-        {
-            count++;
-            j=j-2;
-            i=i-2;
-        }
-       
-       
+        }  
     }
             return count;
     }
